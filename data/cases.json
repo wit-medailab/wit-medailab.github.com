@@ -1,0 +1,208 @@
+{
+  "paperTitle": "BiCrossSurv attention visualization for prostate cancer prognosis",
+  "paperDescription": "This page presents BiCrossSurv cross-modal attention results with risk-group filtering, case switching, interpretability panels, heatmaps, percentile maps, and auto-extracted metadata.",
+  "riskGroups": [
+    {
+      "id": "all",
+      "label": "All cases"
+    },
+    {
+      "id": "high_risk",
+      "label": "High risk"
+    },
+    {
+      "id": "low_risk",
+      "label": "Low risk"
+    }
+  ],
+  "cases": [
+    {
+      "id": "16-02265",
+      "label": "16-02265",
+      "riskGroup": "high_risk",
+      "patientId": "16-02265",
+      "fold": "fold2",
+      "patchCount": 1575,
+      "patchSize": "256 x 256",
+      "featureDim": 2048,
+      "gridShape": "103 x 179",
+      "clinicalTokenCount": 5,
+      "cellGroupCount": 6,
+      "cellGroups": [
+        "spatial_xy",
+        "count_mask",
+        "shape_size",
+        "gray_stats",
+        "color_texture",
+        "other"
+      ],
+      "images": {
+        "panel": "img/cases/16-02265/16-02265_interpretability_panel.png",
+        "wholeSlide": "img/cases/16-02265/16-02265_whole_slide_crop.png",
+        "clinicalHeatmap": "img/cases/16-02265/16-02265_clinical_guided_heatmap.png",
+        "cellHeatmap": "img/cases/16-02265/16-02265_cell_guided_heatmap.png",
+        "clinicalPercentile": "img/cases/16-02265/16-02265_clinical_guided_percentile.png",
+        "cellPercentile": "img/cases/16-02265/16-02265_cell_guided_percentile.png",
+        "pathologySelf": "img/cases/16-02265/16-02265_pathology_self_percentile.png"
+      },
+      "topScores": {
+        "pathology_self_percentile": {
+          "x": 28416,
+          "y": 15616,
+          "percentile": 1.0
+        },
+        "clinical_guided_percentile": {
+          "x": 23552,
+          "y": 12032,
+          "percentile": 1.0
+        },
+        "cell_guided_percentile": {
+          "x": 36096,
+          "y": 16128,
+          "percentile": 0.9994
+        }
+      }
+    },
+    {
+      "id": "16-32397",
+      "label": "16-32397",
+      "riskGroup": "high_risk",
+      "patientId": "16-32397",
+      "fold": "fold2",
+      "patchCount": 370,
+      "patchSize": "263 x 263",
+      "featureDim": 2048,
+      "gridShape": "41 x 53",
+      "clinicalTokenCount": 5,
+      "cellGroupCount": 6,
+      "cellGroups": [
+        "spatial_xy",
+        "count_mask",
+        "shape_size",
+        "gray_stats",
+        "color_texture",
+        "other"
+      ],
+      "images": {
+        "panel": "img/cases/16-32397/16-32397_interpretability_panel.png",
+        "wholeSlide": "img/cases/16-32397/16-32397_whole_slide_crop.png",
+        "clinicalHeatmap": "img/cases/16-32397/16-32397_clinical_guided_heatmap.png",
+        "cellHeatmap": "img/cases/16-32397/16-32397_cell_guided_heatmap.png",
+        "clinicalPercentile": "img/cases/16-32397/16-32397_clinical_guided_percentile.png",
+        "cellPercentile": "img/cases/16-32397/16-32397_cell_guided_percentile.png",
+        "pathologySelf": "img/cases/16-32397/16-32397_pathology_self_percentile.png"
+      },
+      "topScores": {
+        "pathology_self_percentile": {
+          "x": 41821,
+          "y": 8416,
+          "percentile": 1.0
+        },
+        "clinical_guided_percentile": {
+          "x": 36035,
+          "y": 4208,
+          "percentile": 1.0
+        },
+        "cell_guided_percentile": {
+          "x": 44714,
+          "y": 11046,
+          "percentile": 1.0
+        }
+      }
+    },
+    {
+      "id": "20-04611",
+      "label": "20-04611",
+      "riskGroup": "low_risk",
+      "patientId": "20-04611",
+      "fold": "fold5",
+      "patchCount": 1034,
+      "patchSize": "255 x 255",
+      "featureDim": 2048,
+      "gridShape": "585 x 195",
+      "clinicalTokenCount": 5,
+      "cellGroupCount": 6,
+      "cellGroups": [
+        "spatial_xy",
+        "count_mask",
+        "shape_size",
+        "gray_stats",
+        "color_texture",
+        "other"
+      ],
+      "images": {
+        "panel": "img/cases/20-04611/20-04611_interpretability_panel.png",
+        "wholeSlide": "img/cases/20-04611/20-04611_whole_slide_crop.png",
+        "clinicalHeatmap": "img/cases/20-04611/20-04611_clinical_guided_heatmap.png",
+        "cellHeatmap": "img/cases/20-04611/20-04611_cell_guided_heatmap.png",
+        "clinicalPercentile": "img/cases/20-04611/20-04611_clinical_guided_percentile.png",
+        "cellPercentile": "img/cases/20-04611/20-04611_cell_guided_percentile.png",
+        "pathologySelf": "img/cases/20-04611/20-04611_pathology_self_percentile.png"
+      },
+      "topScores": {
+        "pathology_self_percentile": {
+          "x": 39883,
+          "y": 40094,
+          "percentile": 1.0
+        },
+        "clinical_guided_percentile": {
+          "x": 31702,
+          "y": 24516,
+          "percentile": 1.0
+        },
+        "cell_guided_percentile": {
+          "x": 22243,
+          "y": 147351,
+          "percentile": 1.0
+        }
+      }
+    },
+    {
+      "id": "20-08950",
+      "label": "20-08950",
+      "riskGroup": "low_risk",
+      "patientId": "20-08950",
+      "fold": "fold4",
+      "patchCount": 1557,
+      "patchSize": "277 x 277",
+      "featureDim": 2048,
+      "gridShape": "535 x 142",
+      "clinicalTokenCount": 5,
+      "cellGroupCount": 6,
+      "cellGroups": [
+        "spatial_xy",
+        "count_mask",
+        "shape_size",
+        "gray_stats",
+        "color_texture",
+        "other"
+      ],
+      "images": {
+        "panel": "img/cases/20-08950/20-08950_interpretability_panel.png",
+        "wholeSlide": "img/cases/20-08950/20-08950_whole_slide_crop.png",
+        "clinicalHeatmap": "img/cases/20-08950/20-08950_clinical_guided_heatmap.png",
+        "cellHeatmap": "img/cases/20-08950/20-08950_cell_guided_heatmap.png",
+        "clinicalPercentile": "img/cases/20-08950/20-08950_clinical_guided_percentile.png",
+        "cellPercentile": "img/cases/20-08950/20-08950_cell_guided_percentile.png",
+        "pathologySelf": "img/cases/20-08950/20-08950_pathology_self_percentile.png"
+      },
+      "topScores": {
+        "pathology_self_percentile": {
+          "x": 23045,
+          "y": 72884,
+          "percentile": 1.0
+        },
+        "clinical_guided_percentile": {
+          "x": 24433,
+          "y": 69836,
+          "percentile": 1.0
+        },
+        "cell_guided_percentile": {
+          "x": 13327,
+          "y": 157407,
+          "percentile": 1.0
+        }
+      }
+    }
+  ]
+}
