@@ -1,538 +1,545 @@
 <!DOCTYPE html>
-<html>
-  <style>
-    /* 加载前 */
-    .el-image__placeholder {
-      background: url('./img/loading.gif') no-repeat 50% 50% !important;
-      background-size: 50% !important;
-    }
-    
-  </style>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>Clinical Implications of the Multimodal Nomogram for Predicting PCa Risk Stratification</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BiCrossSurv 注意力可视化展示</title>
   <link rel="icon" type="image/x-icon" href="wit.ico">
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --panel: rgba(255, 252, 248, 0.96);
+      --text: #1d242a;
+      --muted: #65717b;
+      --line: #ddd5c8;
+      --accent: #8b3e5c;
+      --accent-soft: #f4dfe7;
+      --high: #b4473d;
+      --low: #2f7f66;
+      --shadow: 0 20px 48px rgba(61, 42, 27, 0.10);
+    }
 
-  <!-- import CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.14/lib/theme-chalk/index.css">
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(225, 234, 223, 0.95), transparent 28%),
+        radial-gradient(circle at top right, rgba(245, 224, 230, 0.95), transparent 28%),
+        linear-gradient(180deg, #faf7f2 0%, #f2ebe2 100%);
+    }
+
+    .page {
+      width: min(1380px, calc(100% - 28px));
+      margin: 24px auto 42px;
+    }
+
+    .hero,
+    .controls,
+    .main-panel,
+    .meta-panel,
+    .detail-panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+
+    .hero {
+      padding: 30px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.18;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 1040px;
+    }
+
+    .controls {
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+
+    .control-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 18px;
+      align-items: end;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .chip.active {
+      border-color: transparent;
+      background: var(--accent);
+      color: white;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: white;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.75fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .main-panel,
+    .meta-panel,
+    .detail-panel {
+      padding: 18px;
+    }
+
+    .section-title {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .section-copy {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .image-stage {
+      border: 1px dashed var(--line);
+      border-radius: 20px;
+      background: white;
+      padding: 14px;
+    }
+
+    .image-stage img,
+    .detail-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      background: #faf7f4;
+    }
+
+    .risk-badge {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .risk-badge.high_risk {
+      background: var(--high);
+    }
+
+    .risk-badge.low_risk {
+      background: var(--low);
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .meta-card {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .meta-label {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .meta-value {
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .group-list,
+    .score-list {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(135deg, #fff6f8 0%, #fffefa 100%);
+    }
+
+    .group-list h3,
+    .score-list h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .stack span {
+      display: inline-block;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #f5ece7;
+      color: #5d5550;
+      font-size: 13px;
+    }
+
+    .score-line {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .detail-panel {
+      margin-bottom: 18px;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .detail-card {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.92);
+      padding: 14px;
+    }
+
+    .detail-card h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    .empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 30px 16px;
+    }
+
+    .footer {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 1080px) {
+      .layout,
+      .control-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100%, calc(100% - 18px));
+      }
+
+      .detail-grid,
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .controls,
+      .main-panel,
+      .meta-panel,
+      .detail-panel {
+        padding: 16px;
+        border-radius: 18px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <div style="vertical-align: middle;height: 60px;margin: 20px;margin-bottom: 40px;text-align: center;box-shadow: 0 10px 5px -5px #dddddd;">
-      <h1 style="margin: 0px;line-height: 60px;">
-        Clinical Implications of the Multimodal Nomogram for Predicting PCa Risk Stratification
-      </h1>
-  </div>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">BiCrossSurv Attention Explorer</div>
+      <h1 id="paper-title">加载中...</h1>
+      <p id="paper-desc" class="lead"></p>
+    </section>
 
-  <div id="main">
-    <div style="border: 20px;">
-      <template>
-        <span style="margin-left: 30px;">Please select a patient: 
-          <el-select ref="item_selected" v-model="value" filterable placeholder="Please select" style="width: 150px;">
-            <el-option
-              v-for="item in options"
-              :key="item.value"
-              :value="item.value"
-              :label="item.label">
-            </el-option>
-          </el-select>
-        </span>
-      </template>
-    </div>
-
-    <!-- 图片显示 -->
-    <div style="text-align: center;display: block;margin: 20px;">
-      <el-image id="image" ref="img" style="width: auto;max-width: 1400px;border: 10px;border-style: solid;border-color: transparent;" src="./img/firstpage.png">
-        <div slot="placeholder" class="image-slot">
-          <i class="el-icon-picture-outline"></i>
+    <section class="controls">
+      <div class="control-grid">
+        <div class="field">
+          <label>风险组筛选</label>
+          <div id="risk-chips" class="chips"></div>
         </div>
-      </el-image>
-    </div>
+        <div class="field">
+          <label for="case-select">病例选择</label>
+          <select id="case-select"></select>
+        </div>
+      </div>
+    </section>
 
-    <div style="text-align:center;margin: 20px;">
-      <el-row>
-        <span style="text-align: center;">Risk prediction of the multimodal nomogram: </span>
-        <!-- <el-tag id="nomo" type="info" style="width: 124px;text-align: center;background-color: #cfcfcf;color: #242424;">unknown</el-tag> -->
-        <el-tag effect="dark" id="nomo" ref="nomo" :type="nomo_tag" v-model="nomo_tag" style="margin-right: 200px;width: 124px;text-align: center;">unknown</el-tag>
-        <span style="text-align: center;">Risk Assignment according to EAU guideline: </span>
-        <el-tag effect="dark" id="eau" ref="eau" :type="eau_tag" v-model="eau_tag" style="width: 124px;text-align: center;">unknown</el-tag>
-      </el-row>
-    </div>
-    <div style="position: relative;right: 0;bottom: 0;margin-top: 30px;">
-      <p style="text-align: right;font-size: 10px;margin: 5px;">For any inquiry, please contact us at xwu@wit.edu.cn</p>
-      <p style="text-align: right;font-size: 10px;margin: 5px;">Copyright @ MedAILab in Wuhan Institute of Technology</p>
-      <p style="text-align: right;font-size: 10px;margin: 5px;">All Right Reserved</p>
-    </div>
+    <section class="layout">
+      <article class="main-panel">
+        <div id="risk-badge" class="risk-badge"></div>
+        <h2 id="main-title" class="section-title"></h2>
+        <p id="main-copy" class="section-copy"></p>
+        <div class="image-stage">
+          <img id="panel-image" src="" alt="interpretability panel">
+        </div>
+      </article>
 
-  </div>
+      <aside class="meta-panel">
+        <h2 class="section-title">病例信息</h2>
+        <div class="meta-grid" id="meta-grid"></div>
+        <div class="group-list" style="margin-bottom: 14px;">
+          <h3>细胞形态分组</h3>
+          <div id="cell-groups" class="stack"></div>
+        </div>
+        <div class="score-list">
+          <h3>最高注意力位置</h3>
+          <div id="top-scores"></div>
+        </div>
+      </aside>
+    </section>
 
-</body>
+    <section class="detail-panel">
+      <h2 class="section-title">细节视图</h2>
+      <p class="section-copy">主图用于答辩快速展示，下面这些分图更适合解释模型在不同引导方式下关注了哪些区域。</p>
+      <div id="detail-grid" class="detail-grid"></div>
+    </section>
 
-  <!-- import Vue before Element -->
-  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
-
-  <!-- import JavaScript -->
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <div class="footer">Wuhan Institute of Technology · MedAILab · attention visualization</div>
+  </main>
 
   <script>
+    const detailDefinitions = [
+      { key: "wholeSlide", title: "Whole-slide crop" },
+      { key: "clinicalHeatmap", title: "Clinical-guided heatmap" },
+      { key: "cellHeatmap", title: "Cell-guided heatmap" },
+      { key: "pathologySelf", title: "Pathology self percentile" },
+      { key: "clinicalPercentile", title: "Clinical-guided percentile" },
+      { key: "cellPercentile", title: "Cell-guided percentile" }
+    ];
 
-    // function preloadImage(url) {
-    //   var img = new Image();
-    //   img.src = url;
-    //   img.onload = function() {
-    //     // 图片加载完成后执行的操作
-    //   };
-    // }
+    const state = {
+      data: null,
+      selectedRisk: "all",
+      selectedCaseId: null
+    };
 
-    // var imgUrl = "../img/0_0.png"
-    
-    // var nomo_tag = document.getElementById("nomo");
-    // var eau_tag = document.getElementById("eau");
+    const titleEl = document.getElementById("paper-title");
+    const descEl = document.getElementById("paper-desc");
+    const riskChipsEl = document.getElementById("risk-chips");
+    const selectEl = document.getElementById("case-select");
+    const riskBadgeEl = document.getElementById("risk-badge");
+    const mainTitleEl = document.getElementById("main-title");
+    const mainCopyEl = document.getElementById("main-copy");
+    const panelImageEl = document.getElementById("panel-image");
+    const metaGridEl = document.getElementById("meta-grid");
+    const cellGroupsEl = document.getElementById("cell-groups");
+    const topScoresEl = document.getElementById("top-scores");
+    const detailGridEl = document.getElementById("detail-grid");
 
-    const app = new Vue({
-      el: '#main',
-      mounted() {
-        // 等待页面加载完成后再开始预缓存图片
-        window.addEventListener('load', this.preloadImages);
-      },
+    function getFilteredCases() {
+      if (!state.data) return [];
+      if (state.selectedRisk === "all") return state.data.cases;
+      return state.data.cases.filter((item) => item.riskGroup === state.selectedRisk);
+    }
 
-      data() {
-        return {
-          nomo_tag: "info",
-          eau_tag: "info",
-
-          // 图片路径
-          image_path: "./img/firstpage.png",
-
-          // 选项内容
-          options: [{
-            value: 'A',
-            label: 'Patient A'
-          }, {
-            value: 'B',
-            label: 'Patient B'
-          }, {
-            value: 'C',
-            label: 'Patient C'
-          }, {
-            value: 'D',
-            label: 'Patient D'
-          }, {
-            value: 'E',
-            label: 'Patient E'
-          }, {
-            value: 'F',
-            label: 'Patient F'
-          }, {
-            value: 'G',
-            label: 'Patient G'
-          }, {
-            value: 'H',
-            label: 'Patient H'
-          }, {
-            value: 'I',
-            label: 'Patient I'
-          }, {
-            value: 'J',
-            label: 'Patient J'
-          }, {
-            value: 'L',
-            label: 'Patient L'
-          }, {
-            value: 'M',
-            label: 'Patient M'
-          }, {
-            value: 'N',
-            label: 'Patient N'
-          }, {
-            value: 'O',
-            label: 'Patient O'
-          }, {
-            value: 'P',
-            label: 'Patient P'
-          }, {
-            value: 'Q',
-            label: 'Patient Q'
-          }, {
-            value: 'R',
-            label: 'Patient R'
-          }, {
-            value: 'S',
-            label: 'Patient S'
-          }, {
-            value: 'T',
-            label: 'Patient T'
-          }, {
-            value: 'U',
-            label: 'Patient U'
-          }, 
-          {
-            value: 'V',
-            label: 'Patient V'
-          }, 
-          {
-            value: 'W',
-            label: 'Patient W'
-          }, 
-          {
-            value: 'X',
-            label: 'Patient X'
-          }, 
-          {
-            value: 'Y',
-            label: 'Patient Y'
-          }, 
-          {
-            value: 'Z',
-            label: 'Patient Z'
-          }, 
-        
-        
-        ],
-          value: ''
-        }
-      },
-
-      methods: {
-        // changeType(nomo_val, eau_val) {
-        //   // 获取当前 el-tag 的 type 属性值
-        //   // const currentType = this.type;
-        //   // 将 type 属性值修改为新的值
-        //   switch (nomo_val) {
-        //     case 0:
-        //       // nomo_tag.style.borderColor = "#409eff";
-        //       // nomo_tag.style.backgroundColor = "#409eff";
-        //       // nomo_tag.style.backgroundColor = rgb()
-        //       bgcolor = "#409eff";
-        //       bdcolor = "#409eff";
-        //       break;
-        //     case 1:
-        //       nomo_tag.style.borderColor = "#e6a23c";
-        //       nomo_tag.style.backgroundColor = "#e6a23c";
-        //       break;
-        //     case 2:
-        //       nomo_tag.style.borderColor = "#f56c6c";
-        //       nomo_tag.style.backgroundColor = "#f56c6c";
-        //       break;
-        //     case 3:
-        //       nomo_tag.style.borderColor = "#909399";
-        //       nomo_tag.style.backgroundColor = "#909399";
-        //       break;
-        //   }
-          
-        //   console.log(nomo_tag.style.backgroundColor);
-          
-        //   // this.type = currentType === "primary" ? "success" : "primary";
-        //   // 更新 el-tag 的 type 属性值
-        // },
-        //   // 
-        // formatTagType(state) {
-        //   switch (state) {
-        //     case '0': 
-        //       return 'success';
-        //       break;
-        //     case 1:
-        //       return 'warning';
-        //       break;
-        //     case 2:
-        //       return 'danger';
-        //       break;
-        //     case 3:
-        //       return 'info';
-        //       break;
-        //   }
-        // },
-
-        nomotagLow() {
-          this.nomo_tag = 'success';
-        },
-
-        eautagLow() {
-          this.eau_tag = 'success';
-        },
-
-        nomotagIntermediate() {
-          this.nomo_tag = 'warning';
-        },
-        
-        eautagIntermediate() {
-          this.eau_tag = 'warning';
-        },
-
-        nomotagHigh() {
-          this.nomo_tag = 'danger';
-        },
-        
-        eautagHigh() {
-          this.eau_tag = 'danger';
-        },
-
-        // 获取最新的选项值
-        change() {
-          console.log(this.value);
-        },
-
-        // 预缓存图片
-        preloadImages() {
-          let imgs = [
-          "./img/0_0_0.png",
-          "./img/0_0_1.png",
-          "./img/0_0_2.png",
-          "./img/0_0_3.png",
-          "./img/0_0_4.png",
-          "./img/0_0_5.png",
-          "./img/0_0_6.png",
-          "./img/0_1.png",
-          "./img/1_0.png",
-          "./img/1_1_0.png",
-          "./img/1_1_1.png",
-          "./img/1_1_2.png",
-          "./img/1_1_3.png",
-          "./img/1_1_4.png",
-          "./img/1_1_5.png",
-          "./img/2_1_0.png",
-          "./img/2_2_0.png",
-          "./img/2_2_1.png",
-          "./img/2_2_2.png",
-          "./img/2_2_3.png",
-          "./img/2_2_4.png",
-          "./img/2_2_5.png",
-          "./img/2_2_6.png",
-          "./img/2_2_7.png",
-          "./img/2_2_8.png",
-          "./img/2_2_9.png",
-          ]
-
-          for (let img of imgs) {
-            let image = new Image()
-            image.src = img
-            image.onload = () => {
-              this.count++
-            }
-          }
-        },
-
-      },
-      watch: {
-        // 监听 el-select 选项值的变化
-        value(val) {
-          // 执行回调函数
-          this.change();
-          var img = document.getElementById("image");
-          var nomo = document.getElementById("nomo");
-          var eau = document.getElementById("eau");
-          switch (val) {
-            case 'A': {
-              img.src = "./img/0_0_0.png";
-              eau.innerText = "Low";
-              nomo.innerText = "Low";
-              this.eautagLow();
-              this.nomotagLow();
-              break;
-            }
-            case 'B': {
-              img.src = "./img/0_0_1.png";
-              eau.innerText = "Low";
-              nomo.innerText = "Low";
-              this.eautagLow();
-              this.nomotagLow();
-              break;
-            }
-            case 'C': {
-              img.src = "./img/0_0_2.png";
-              eau.innerText = "Low";
-              nomo.innerText = "Low";
-              this.eautagLow();
-              this.nomotagLow();
-              break;
-            }
-            case 'D': {
-              img.src = "./img/0_0_3.png";
-              eau.innerText = "Low";
-              nomo.innerText = "Low";
-              this.eautagLow();
-              this.nomotagLow();
-              break;
-            }
-            case 'E': {
-              img.src = "./img/0_0_4.png";
-              eau.innerText = "Low";
-              nomo.innerText = "Low";
-              this.eautagLow();
-              this.nomotagLow();
-              break;
-            }
-            case 'F': {
-              img.src = "./img/0_0_5.png";
-              eau.innerText = "Low";
-              nomo.innerText = "Low";
-              this.eautagLow();
-              this.nomotagLow();
-              break;
-            }
-            case 'G': {
-              img.src = "./img/0_0_6.png";
-              eau.innerText = "Low";
-              nomo.innerText = "Low";
-              this.eautagLow();
-              this.nomotagLow();
-              break;
-            }
-            case 'H': {
-              img.src = "./img/0_1.png";
-              eau.innerText = "Low";
-              nomo.innerText = "Intermediate";
-              this.eautagLow();
-              this.nomotagIntermediate();
-              break;
-            }
-            case 'I': {
-              img.src = "./img/1_0.png";
-              eau.innerText = "Intermediate";
-              nomo.innerText = "Low";
-              this.eautagIntermediate();
-              this.nomotagLow();
-              break;
-            }
-            case 'J': {
-              img.src = "./img/1_1_0.png";
-              eau.innerText = "Intermediate";
-              nomo.innerText = "Intermediate";
-              this.eautagIntermediate();
-              this.nomotagIntermediate();
-              break;
-            }
-            case 'K': {
-              img.src = "./img/1_1_1.png";
-              eau.innerText = "Intermediate";
-              nomo.innerText = "Intermediate";
-              this.eautagIntermediate();
-              this.nomotagIntermediate();
-              break;
-            }
-            case 'L': {
-              img.src = "./img/1_1_2.png";
-              eau.innerText = "Intermediate";
-              nomo.innerText = "Intermediate";
-              this.eautagIntermediate();
-              this.nomotagIntermediate();
-              break;
-            }
-            case 'M': {
-              img.src = "./img/1_1_3.png";
-              eau.innerText = "Intermediate";
-              nomo.innerText = "Intermediate";
-              this.eautagIntermediate();
-              this.nomotagIntermediate();
-              break;
-            }
-            case 'N': {
-              img.src = "./img/1_1_4.png";
-              eau.innerText = "Intermediate";
-              nomo.innerText = "Intermediate";
-              this.eautagIntermediate();
-              this.nomotagIntermediate();
-              break;
-            }
-            case 'O': {
-              img.src = "./img/1_1_5.png";
-              eau.innerText = "Intermediate";
-              nomo.innerText = "Intermediate";
-              this.eautagIntermediate();
-              this.nomotagIntermediate();
-              break;
-            }
-            case 'P': {
-              img.src = "./img/2_1_0.png";
-              eau.innerText = "High";
-              nomo.innerText = "Intermediate";
-              this.eautagHigh();
-              this.nomotagIntermediate();
-              break;
-            }
-            case 'Q': {
-              img.src = "./img/2_2_0.png";
-              eau.innerText = "High";
-              nomo.innerText = "High";
-              this.eautagHigh();
-              this.nomotagHigh();
-              break;
-            }
-            case 'R': {
-              img.src = "./img/2_2_1.png";
-              eau.innerText = "High";
-              nomo.innerText = "High";
-              this.eautagHigh();
-              this.nomotagHigh();
-              break;
-            }
-            case 'S': {
-              img.src = "./img/2_2_2.png";
-              eau.innerText = "High";
-              nomo.innerText = "High";
-              this.eautagHigh();
-              this.nomotagHigh();
-              break;
-            }
-            case 'T': {
-              img.src = "./img/2_2_3.png";
-              eau.innerText = "High";
-              nomo.innerText = "High";
-              this.eautagHigh();
-              this.nomotagHigh();
-              break;
-            }
-            case 'U': {
-              img.src = "./img/2_2_4.png";
-              eau.innerText = "High";
-              nomo.innerText = "High";
-              this.eautagHigh();
-              this.nomotagHigh();
-              break;
-            }
-            case 'V': {
-              img.src = "./img/2_2_5.png";
-              eau.innerText = "High";
-              nomo.innerText = "High";
-              this.eautagHigh();
-              this.nomotagHigh();
-              break;
-            }
-            case 'W': {
-              img.src = "./img/2_2_6.png";
-              eau.innerText = "High";
-              nomo.innerText = "High";
-              this.eautagHigh();
-              this.nomotagHigh();
-              break;
-            }
-            case 'X': {
-              img.src = "./img/2_2_7.png";
-              eau.innerText = "High";
-              nomo.innerText = "High";
-              this.eautagHigh();
-              this.nomotagHigh();
-              break;
-            }
-            case 'Y': {
-              img.src = "./img/2_2_8.png";
-              eau.innerText = "High";
-              nomo.innerText = "High";
-              this.eautagHigh();
-              this.nomotagHigh();
-              break;
-            }
-            case 'Z': {
-              img.src = "./img/2_2_9.png";
-              eau.innerText = "High";
-              nomo.innerText = "High";
-              this.eautagHigh();
-              this.nomotagHigh();
-              break;
-            }
-          }
-        }
+    function ensureSelectedCase() {
+      const filtered = getFilteredCases();
+      if (!filtered.length) {
+        state.selectedCaseId = null;
+        return;
       }
+
+      const exists = filtered.some((item) => item.id === state.selectedCaseId);
+      if (!exists) {
+        state.selectedCaseId = filtered[0].id;
+      }
+    }
+
+    function renderRiskChips() {
+      riskChipsEl.innerHTML = "";
+      for (const group of state.data.riskGroups) {
+        const button = document.createElement("button");
+        button.className = "chip" + (group.id === state.selectedRisk ? " active" : "");
+        button.textContent = group.label;
+        button.addEventListener("click", () => {
+          state.selectedRisk = group.id;
+          ensureSelectedCase();
+          renderAll();
+        });
+        riskChipsEl.appendChild(button);
+      }
+    }
+
+    function renderCaseSelect() {
+      const filtered = getFilteredCases();
+      selectEl.innerHTML = "";
+      for (const item of filtered) {
+        const option = document.createElement("option");
+        option.value = item.id;
+        option.textContent = item.label;
+        selectEl.appendChild(option);
+      }
+      selectEl.value = state.selectedCaseId || "";
+    }
+
+    function renderMeta(caseItem) {
+      const entries = [
+        ["Patient ID", caseItem.patientId],
+        ["Fold", caseItem.fold],
+        ["Patch Count", caseItem.patchCount],
+        ["Patch Size", caseItem.patchSize],
+        ["Feature Dim", caseItem.featureDim],
+        ["Grid Shape", caseItem.gridShape],
+        ["Clinical Tokens", caseItem.clinicalTokenCount],
+        ["Cell Groups", caseItem.cellGroupCount]
+      ];
+
+      metaGridEl.innerHTML = entries.map(([label, value]) => `
+        <div class="meta-card">
+          <div class="meta-label">${label}</div>
+          <div class="meta-value">${value}</div>
+        </div>
+      `).join("");
+
+      cellGroupsEl.innerHTML = caseItem.cellGroups.map((group) => `<span>${group}</span>`).join("");
+    }
+
+    function renderScores(caseItem) {
+      const scoreMap = [
+        ["Clinical guided", caseItem.topScores.clinical_guided_percentile],
+        ["Cell guided", caseItem.topScores.cell_guided_percentile],
+        ["Self attention", caseItem.topScores.pathology_self_percentile]
+      ];
+      topScoresEl.innerHTML = scoreMap.map(([label, value]) => `
+        <div class="score-line">${label}: percentile ${value.percentile}, coordinate (${value.x}, ${value.y})</div>
+      `).join("");
+    }
+
+    function renderDetails(caseItem) {
+      const cards = detailDefinitions
+        .filter((item) => caseItem.images[item.key])
+        .map((item) => `
+          <article class="detail-card">
+            <h3>${item.title}</h3>
+            <img src="${caseItem.images[item.key]}" alt="${item.title}">
+          </article>
+        `);
+
+      detailGridEl.innerHTML = cards.length
+        ? cards.join("")
+        : '<div class="empty">当前病例还没有可展示的细节分图。</div>';
+    }
+
+    function renderCurrentCase() {
+      const current = state.data.cases.find((item) => item.id === state.selectedCaseId);
+      if (!current) {
+        mainTitleEl.textContent = "暂无病例";
+        mainCopyEl.textContent = "当前筛选条件下没有可展示的数据。";
+        panelImageEl.removeAttribute("src");
+        metaGridEl.innerHTML = "";
+        cellGroupsEl.innerHTML = "";
+        topScoresEl.innerHTML = "";
+        detailGridEl.innerHTML = '<div class="empty">暂无可展示内容。</div>';
+        riskBadgeEl.textContent = "";
+        riskBadgeEl.className = "risk-badge";
+        return;
+      }
+
+      const riskLabel = current.riskGroup === "high_risk" ? "High risk" : "Low risk";
+      riskBadgeEl.textContent = riskLabel;
+      riskBadgeEl.className = "risk-badge " + current.riskGroup;
+      mainTitleEl.textContent = `${current.patientId} 病例的跨模态注意力总览`;
+      mainCopyEl.textContent = "主图整合了 whole-slide crop、clinical-guided attention、cell-guided attention 和关键 patch 展示，适合在答辩或汇报时先整体介绍模型关注区域。";
+      panelImageEl.src = current.images.panel || "";
+      panelImageEl.alt = `${current.patientId} interpretability panel`;
+      renderMeta(current);
+      renderScores(current);
+      renderDetails(current);
+    }
+
+    function renderAll() {
+      renderRiskChips();
+      renderCaseSelect();
+      renderCurrentCase();
+    }
+
+    selectEl.addEventListener("change", () => {
+      state.selectedCaseId = selectEl.value;
+      renderCurrentCase();
     });
+
+    fetch("data/cases.json")
+      .then((res) => res.json())
+      .then((data) => {
+        state.data = data;
+        titleEl.textContent = data.paperTitle;
+        descEl.textContent = data.paperDescription;
+        ensureSelectedCase();
+        renderAll();
+      })
+      .catch(() => {
+        titleEl.textContent = "数据加载失败";
+        descEl.textContent = "请先生成 data/cases.json，或者检查图片与数据文件是否已经放入仓库。";
+      });
   </script>
+</body>
 </html>
