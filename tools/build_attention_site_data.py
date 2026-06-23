@@ -4,6 +4,7 @@ import shutil
 from pathlib import Path
 
 from PIL import Image
+from openpyxl import load_workbook
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -12,6 +13,7 @@ SOURCE_PANEL_ROOT = ROOT / "all_patient_attention_results_morphology_guided_filt
 SOURCE_CASE_ROOT = ROOT / "case_csvs_all"
 TARGET_IMAGE_ROOT = REPO_ROOT / "img" / "cases"
 TARGET_DATA_DIR = REPO_ROOT / "data"
+CLINICAL_WORKBOOK = ROOT / "os_based_merge_pMMR.clean.matched.xlsx"
 
 RISK_GROUP_IDS = ("high_risk", "low_risk")
 
@@ -51,6 +53,69 @@ def read_top_scores(path: Path):
     }
 
 
+def read_clinical_data(path: Path):
+    if not path.exists():
+        return {}
+
+    workbook = load_workbook(path, read_only=True, data_only=True)
+    sheet = workbook[workbook.sheetnames[0]]
+
+    clinical = {}
+    for row in sheet.iter_rows(min_row=2, values_only=True):
+        if not row or not row[0]:
+            continue
+
+        patient_id = str(row[0]).strip()
+        time_value = row[1]
+        t_value = row[3]
+        n_value = row[4]
+        m_value = row[5]
+        age_value = row[6]
+        gleason_pattern = row[7]
+        gleason_score = row[8]
+
+        def with_prefix(prefix: str, value):
+            if value in (None, ""):
+                return None
+            value_str = str(value).strip()
+            return f"{prefix}{value_str}"
+
+        def format_age(value):
+            if value in (None, ""):
+                return None
+            numeric = float(value)
+            return int(numeric) if numeric.is_integer() else round(numeric, 1)
+
+        def format_survival(value):
+            if value in (None, ""):
+                return None
+            numeric = float(value)
+            return int(numeric) if numeric.is_integer() else round(numeric, 1)
+
+        def format_gleason(pattern, score):
+            if pattern not in (None, "") and score not in (None, ""):
+                score_num = float(score)
+                score_text = int(score_num) if score_num.is_integer() else round(score_num, 1)
+                return f"{str(pattern).strip()} ({score_text})"
+            if pattern not in (None, ""):
+                return str(pattern).strip()
+            if score not in (None, ""):
+                score_num = float(score)
+                return int(score_num) if score_num.is_integer() else round(score_num, 1)
+            return None
+
+        clinical[patient_id] = {
+            "age": format_age(age_value),
+            "tStage": with_prefix("T", t_value),
+            "nStage": with_prefix("N", n_value),
+            "mStage": with_prefix("M", m_value),
+            "gleason": format_gleason(gleason_pattern, gleason_score),
+            "survival": format_survival(time_value),
+        }
+
+    return clinical
+
+
 def discover_case_groups():
     case_groups = {}
     for group in RISK_GROUP_IDS:
@@ -60,7 +125,7 @@ def discover_case_groups():
     return case_groups
 
 
-def build_case(group: str, patient_id: str):
+def build_case(group: str, patient_id: str, clinical_lookup):
     panel_dir = SOURCE_PANEL_ROOT / group / patient_id
     case_dir = SOURCE_CASE_ROOT / patient_id
 
@@ -86,12 +151,21 @@ def build_case(group: str, patient_id: str):
 
     meta = read_json(meta_path)
     top_scores = read_top_scores(csv_path)
+    clinical_info = clinical_lookup.get(patient_id, {})
 
     return {
         "id": patient_id,
         "label": patient_id,
         "riskGroup": group,
         "patientId": patient_id,
+        "clinicalInfo": {
+            "age": clinical_info.get("age"),
+            "tStage": clinical_info.get("tStage"),
+            "nStage": clinical_info.get("nStage"),
+            "mStage": clinical_info.get("mStage"),
+            "gleason": clinical_info.get("gleason"),
+            "survival": clinical_info.get("survival"),
+        },
         "fold": f"fold{meta['fold_id']}",
         "patchCount": meta["patch_count"],
         "patchSize": f"{meta['stride']} x {meta['stride']}",
@@ -111,10 +185,11 @@ def main():
         shutil.rmtree(TARGET_IMAGE_ROOT)
 
     case_groups = discover_case_groups()
+    clinical_lookup = read_clinical_data(CLINICAL_WORKBOOK)
     cases = []
     for group, patient_ids in case_groups.items():
         for patient_id in patient_ids:
-            cases.append(build_case(group, patient_id))
+            cases.append(build_case(group, patient_id, clinical_lookup))
 
     payload = {
         "paperTitle": "BiCrossSurv attention visualization for prostate cancer prognosis",

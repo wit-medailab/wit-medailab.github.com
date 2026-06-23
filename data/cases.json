@@ -61,6 +61,14 @@
           "y": 16128,
           "percentile": 0.9994
         }
+      },
+      "clinicalInfo": {
+        "age": 58,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 3251
       }
     },
     {
@@ -108,6 +116,14 @@
           "y": 11046,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 65,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1021
       }
     },
     {
@@ -155,6 +171,14 @@
           "y": 23044,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 69,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 2305
       }
     },
     {
@@ -202,6 +226,14 @@
           "y": 118828,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 84,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M0",
+        "gleason": "4+4 (8)",
+        "survival": 1203
       }
     },
     {
@@ -249,6 +281,14 @@
           "y": 7371,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 82,
+        "tStage": "T3a",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 2090
       }
     },
     {
@@ -296,6 +336,14 @@
           "y": 8448,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 77,
+        "tStage": "T5",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 1407
       }
     },
     {
@@ -343,6 +391,14 @@
           "y": 108360,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 623
       }
     },
     {
@@ -390,6 +446,14 @@
           "y": 80136,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 63,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 525
       }
     },
     {
@@ -437,6 +501,14 @@
           "y": 18120,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 87,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 430
       }
     },
     {
@@ -484,6 +556,14 @@
           "y": 13486,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 68,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "3+4 (7)",
+        "survival": 2413
       }
     },
     {
@@ -531,6 +611,14 @@
           "y": 70966,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 2400
       }
     },
     {
@@ -578,6 +666,14 @@
           "y": 44945,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 57,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 2178
       }
     },
     {
@@ -625,6 +721,14 @@
           "y": 12800,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 2153
       }
     },
     {
@@ -672,6 +776,14 @@
           "y": 93082,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 57,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 414
       }
     },
     {
@@ -719,6 +831,14 @@
           "y": 44261,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 343
       }
     },
     {
@@ -766,6 +886,14 @@
           "y": 35674,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 64,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1143
       }
     },
     {
@@ -813,6 +941,14 @@
           "y": 39487,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 80,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 261
       }
     },
     {
@@ -860,6 +996,14 @@
           "y": 35518,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 61,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "3+4 (7)",
+        "survival": 728
       }
     },
     {
@@ -907,6 +1051,14 @@
           "y": 35878,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 63,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 582
       }
     },
     {
@@ -954,6 +1106,14 @@
           "y": 26495,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 55,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 547
       }
     },
     {
@@ -1001,6 +1161,14 @@
           "y": 105052,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 63,
+        "tStage": "T3",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 1087
       }
     },
     {
@@ -1048,6 +1216,14 @@
           "y": 75198,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 65,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1030
       }
     },
     {
@@ -1095,6 +1271,14 @@
           "y": 149962,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 52,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 784
       }
     },
     {
@@ -1142,6 +1326,14 @@
           "y": 44175,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 67,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 690
       }
     },
     {
@@ -1189,6 +1381,14 @@
           "y": 4185,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 82,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 139
       }
     },
     {
@@ -1236,6 +1436,14 @@
           "y": 68753,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 69,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1568
       }
     },
     {
@@ -1283,6 +1491,14 @@
           "y": 39758,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 79,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+5 (10)",
+        "survival": 721
       }
     },
     {
@@ -1330,6 +1546,14 @@
           "y": 37364,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 59,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 695
       }
     },
     {
@@ -1377,6 +1601,14 @@
           "y": 19681,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 68,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 776
       }
     },
     {
@@ -1424,6 +1656,14 @@
           "y": 52722,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 67,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1508
       }
     },
     {
@@ -1471,6 +1711,14 @@
           "y": 12498,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "5+5 (10)",
+        "survival": 773
       }
     },
     {
@@ -1518,6 +1766,14 @@
           "y": 41055,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T2c",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 919
       }
     },
     {
@@ -1565,6 +1821,14 @@
           "y": 7541,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 85,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 181
       }
     },
     {
@@ -1612,6 +1876,14 @@
           "y": 51410,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 67,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1507
       }
     },
     {
@@ -1659,6 +1931,14 @@
           "y": 7211,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 68,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 1494
       }
     },
     {
@@ -1706,6 +1986,14 @@
           "y": 19969,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "3+4 (7)",
+        "survival": 33
       }
     },
     {
@@ -1753,6 +2041,14 @@
           "y": 83533,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1454
       }
     },
     {
@@ -1800,6 +2096,14 @@
           "y": 21721,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1473
       }
     },
     {
@@ -1847,6 +2151,14 @@
           "y": 38824,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 78,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "3+4 (7)",
+        "survival": 1618
       }
     },
     {
@@ -1894,6 +2206,14 @@
           "y": 21921,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 87,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 403
       }
     },
     {
@@ -1941,6 +2261,14 @@
           "y": 56686,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1295
       }
     },
     {
@@ -1988,6 +2316,14 @@
           "y": 42129,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 83,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1410
       }
     },
     {
@@ -2035,6 +2371,14 @@
           "y": 122440,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 79,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1349
       }
     },
     {
@@ -2082,6 +2426,14 @@
           "y": 74494,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 1277
       }
     },
     {
@@ -2129,6 +2481,14 @@
           "y": 30956,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 78,
+        "tStage": "T2c",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1248
       }
     },
     {
@@ -2176,6 +2536,14 @@
           "y": 8721,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T2c",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1250
       }
     },
     {
@@ -2223,6 +2591,14 @@
           "y": 82767,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 73,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+5 (10)",
+        "survival": 1215
       }
     },
     {
@@ -2270,6 +2646,14 @@
           "y": 29338,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 78,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 251
       }
     },
     {
@@ -2317,6 +2701,14 @@
           "y": 192528,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 68,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 419
       }
     },
     {
@@ -2364,6 +2756,14 @@
           "y": 149522,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 75,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1189
       }
     },
     {
@@ -2411,6 +2811,14 @@
           "y": 18218,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "3+4 (7)",
+        "survival": 1340
       }
     },
     {
@@ -2458,6 +2866,14 @@
           "y": 19088,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M0",
+        "gleason": "5+5 (10)",
+        "survival": 1154
       }
     },
     {
@@ -2505,6 +2921,14 @@
           "y": 8342,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 78,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 439
       }
     },
     {
@@ -2552,6 +2976,14 @@
           "y": 56552,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 77,
+        "tStage": "T3a",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 16
       }
     },
     {
@@ -2599,6 +3031,14 @@
           "y": 36190,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1290
       }
     },
     {
@@ -2646,6 +3086,14 @@
           "y": 32996,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 78,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1339
       }
     },
     {
@@ -2693,6 +3141,14 @@
           "y": 24273,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 59,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 351
       }
     },
     {
@@ -2740,6 +3196,14 @@
           "y": 7656,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1216
       }
     },
     {
@@ -2787,6 +3251,14 @@
           "y": 3315,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 79,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1219
       }
     },
     {
@@ -2834,6 +3306,14 @@
           "y": 6452,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 55,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1057
       }
     },
     {
@@ -2881,6 +3361,14 @@
           "y": 31512,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 62,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 895
       }
     },
     {
@@ -2928,6 +3416,14 @@
           "y": 34520,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 82,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "5+5 (10)",
+        "survival": 415
       }
     },
     {
@@ -2975,6 +3471,14 @@
           "y": 13845,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 75,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 698
       }
     },
     {
@@ -3022,6 +3526,14 @@
           "y": 2790,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1154
       }
     },
     {
@@ -3069,6 +3581,14 @@
           "y": 30975,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 84,
+        "tStage": "T2c",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 779
       }
     },
     {
@@ -3116,6 +3636,14 @@
           "y": 56050,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 69,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1155
       }
     },
     {
@@ -3163,6 +3691,14 @@
           "y": 4293,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "5+5 (10)",
+        "survival": 370
       }
     },
     {
@@ -3210,6 +3746,14 @@
           "y": 12673,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 64,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1104
       }
     },
     {
@@ -3257,6 +3801,14 @@
           "y": 31110,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 83,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1107
       }
     },
     {
@@ -3304,6 +3856,14 @@
           "y": 29704,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 64,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 425
       }
     },
     {
@@ -3351,6 +3911,14 @@
           "y": 90194,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 62,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1070
       }
     },
     {
@@ -3398,6 +3966,14 @@
           "y": 5614,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 59,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+5 (10)",
+        "survival": 1079
       }
     },
     {
@@ -3445,6 +4021,14 @@
           "y": 13323,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 73,
+        "tStage": "T3a",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 906
       }
     },
     {
@@ -3492,6 +4076,14 @@
           "y": 39147,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 72,
+        "tStage": "T2c",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 446
       }
     },
     {
@@ -3539,6 +4131,14 @@
           "y": 65619,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 79,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 563
       }
     },
     {
@@ -3586,6 +4186,14 @@
           "y": 85168,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 64,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 40
       }
     },
     {
@@ -3633,6 +4241,14 @@
           "y": 75604,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 81,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 961
       }
     },
     {
@@ -3680,6 +4296,14 @@
           "y": 18591,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 58,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+5 (10)",
+        "survival": 210
       }
     },
     {
@@ -3727,6 +4351,14 @@
           "y": 77259,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 1888
       }
     },
     {
@@ -3774,6 +4406,14 @@
           "y": 24964,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 272
       }
     },
     {
@@ -3821,6 +4461,14 @@
           "y": 43243,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 69,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1078
       }
     },
     {
@@ -3868,6 +4516,14 @@
           "y": 14602,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 77,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 1044
       }
     },
     {
@@ -3915,6 +4571,14 @@
           "y": 37939,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 89,
+        "tStage": "T3a",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 714
       }
     },
     {
@@ -3962,6 +4626,14 @@
           "y": 50918,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T3a",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 60
       }
     },
     {
@@ -4009,6 +4681,14 @@
           "y": 39960,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 82,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "5+5 (10)",
+        "survival": 64
       }
     },
     {
@@ -4056,6 +4736,14 @@
           "y": 7801,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 79,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 753
       }
     },
     {
@@ -4103,6 +4791,14 @@
           "y": 43333,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 83,
+        "tStage": "T2b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 356
       }
     },
     {
@@ -4150,6 +4846,14 @@
           "y": 123618,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 72,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 868
       }
     },
     {
@@ -4197,6 +4901,14 @@
           "y": 96705,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 52,
+        "tStage": "T3a",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 577
       }
     },
     {
@@ -4244,6 +4956,14 @@
           "y": 6105,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 72,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 813
       }
     },
     {
@@ -4291,6 +5011,14 @@
           "y": 65161,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 478
       }
     },
     {
@@ -4338,6 +5066,14 @@
           "y": 117086,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 806
       }
     },
     {
@@ -4385,6 +5121,14 @@
           "y": 135207,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 58,
+        "tStage": "T。",
+        "nStage": "N。",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 1769
       }
     },
     {
@@ -4432,6 +5176,14 @@
           "y": 126934,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1636
       }
     },
     {
@@ -4479,6 +5231,14 @@
           "y": 131044,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 910
       }
     },
     {
@@ -4526,6 +5286,14 @@
           "y": 92829,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 56,
+        "tStage": "T3a",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 906
       }
     },
     {
@@ -4573,6 +5341,14 @@
           "y": 18392,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 72,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 902
       }
     },
     {
@@ -4620,6 +5396,14 @@
           "y": 23230,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 64,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1778
       }
     },
     {
@@ -4667,6 +5451,14 @@
           "y": 13426,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 51,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+5 (10)",
+        "survival": 482
       }
     },
     {
@@ -4714,6 +5506,14 @@
           "y": 105984,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 75,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 912
       }
     },
     {
@@ -4761,6 +5561,14 @@
           "y": 57860,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 902
       }
     },
     {
@@ -4808,6 +5616,14 @@
           "y": 24194,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 56,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 900
       }
     },
     {
@@ -4855,6 +5671,14 @@
           "y": 69120,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 59,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 864
       }
     },
     {
@@ -4902,6 +5726,14 @@
           "y": 9917,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 81,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 548
       }
     },
     {
@@ -4949,6 +5781,14 @@
           "y": 96460,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 823
       }
     },
     {
@@ -4996,6 +5836,14 @@
           "y": 113168,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 64,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 861
       }
     },
     {
@@ -5043,6 +5891,14 @@
           "y": 97644,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 75,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 523
       }
     },
     {
@@ -5090,6 +5946,14 @@
           "y": 88128,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T3",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 882
       }
     },
     {
@@ -5137,6 +6001,14 @@
           "y": 116662,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 88,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 817
       }
     },
     {
@@ -5184,6 +6056,14 @@
           "y": 37680,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 56,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "3+4 (7)",
+        "survival": 873
       }
     },
     {
@@ -5231,6 +6111,14 @@
           "y": 52789,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 78,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 383
       }
     },
     {
@@ -5278,6 +6166,14 @@
           "y": 66938,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 923
       }
     },
     {
@@ -5325,6 +6221,14 @@
           "y": 142990,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 936
       }
     },
     {
@@ -5372,6 +6276,14 @@
           "y": 61305,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 75,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 936
       }
     },
     {
@@ -5419,6 +6331,14 @@
           "y": 3757,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 901
       }
     },
     {
@@ -5466,6 +6386,14 @@
           "y": 70350,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M0",
+        "gleason": "3+4 (7)",
+        "survival": 887
       }
     },
     {
@@ -5513,6 +6441,14 @@
           "y": 32175,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 75,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 900
       }
     },
     {
@@ -5560,6 +6496,14 @@
           "y": 33376,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 62,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 805
       }
     },
     {
@@ -5607,6 +6551,14 @@
           "y": 94505,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 79,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 469
       }
     },
     {
@@ -5654,6 +6606,14 @@
           "y": 128948,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 78,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 873
       }
     },
     {
@@ -5701,6 +6661,14 @@
           "y": 81282,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 67,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 880
       }
     },
     {
@@ -5748,6 +6716,14 @@
           "y": 3390,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 825
       }
     },
     {
@@ -5795,6 +6771,14 @@
           "y": 119212,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 67,
+        "tStage": "T3",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 809
       }
     },
     {
@@ -5842,6 +6826,14 @@
           "y": 55550,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 69,
+        "tStage": "T4a",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 726
       }
     },
     {
@@ -5889,6 +6881,14 @@
           "y": 19943,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 627
       }
     },
     {
@@ -5936,6 +6936,14 @@
           "y": 64256,
           "percentile": 0.9989
         }
+      },
+      "clinicalInfo": {
+        "age": 61,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 546
       }
     },
     {
@@ -5983,6 +6991,14 @@
           "y": 88832,
           "percentile": 0.9965
         }
+      },
+      "clinicalInfo": {
+        "age": 80,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 2381
       }
     },
     {
@@ -6030,6 +7046,14 @@
           "y": 105600,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 63,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 3077
       }
     },
     {
@@ -6077,6 +7101,14 @@
           "y": 0,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 80,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "3+4 (7)",
+        "survival": 1393
       }
     },
     {
@@ -6124,6 +7156,14 @@
           "y": 29006,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 59,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 848
       }
     },
     {
@@ -6171,6 +7211,14 @@
           "y": 59274,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 57,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 3039
       }
     },
     {
@@ -6218,6 +7266,14 @@
           "y": 0,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 67,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 2616
       }
     },
     {
@@ -6265,6 +7321,14 @@
           "y": 164502,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 55,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 2696
       }
     },
     {
@@ -6312,6 +7376,14 @@
           "y": 8882,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1957
       }
     },
     {
@@ -6359,6 +7431,14 @@
           "y": 74119,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T3a",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 2653
       }
     },
     {
@@ -6406,6 +7486,14 @@
           "y": 14072,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 73,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1304
       }
     },
     {
@@ -6453,6 +7541,14 @@
           "y": 8992,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "3+3 (6)",
+        "survival": 2444
       }
     },
     {
@@ -6500,6 +7596,14 @@
           "y": 62643,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 53,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+5 (10)",
+        "survival": 50
       }
     },
     {
@@ -6547,6 +7651,14 @@
           "y": 51410,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 72,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 412
       }
     },
     {
@@ -6594,6 +7706,14 @@
           "y": 4739,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 51,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 2337
       }
     },
     {
@@ -6641,6 +7761,14 @@
           "y": 56584,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 77,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 2148
       }
     },
     {
@@ -6688,6 +7816,14 @@
           "y": 16437,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 56,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 208
       }
     },
     {
@@ -6735,6 +7871,14 @@
           "y": 47250,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 83,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 526
       }
     },
     {
@@ -6782,6 +7926,14 @@
           "y": 4725,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 67,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 2026
       }
     },
     {
@@ -6829,6 +7981,14 @@
           "y": 10363,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 68,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 2091
       }
     },
     {
@@ -6876,6 +8036,14 @@
           "y": 21227,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 72,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 2053
       }
     },
     {
@@ -6923,6 +8091,14 @@
           "y": 147351,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 65,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 1551
       }
     },
     {
@@ -6970,6 +8146,14 @@
           "y": 157407,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 62,
+        "tStage": "T2",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1445
       }
     },
     {
@@ -7017,6 +8201,14 @@
           "y": 38850,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 1343
       }
     },
     {
@@ -7064,6 +8256,14 @@
           "y": 40069,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 73,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 1205
       }
     },
     {
@@ -7111,6 +8311,14 @@
           "y": 12940,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1507
       }
     },
     {
@@ -7158,6 +8366,14 @@
           "y": 44245,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T2a",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1467
       }
     },
     {
@@ -7205,6 +8421,14 @@
           "y": 19710,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 61,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 459
       }
     },
     {
@@ -7252,6 +8476,14 @@
           "y": 13118,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 73,
+        "tStage": "T2c",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 195
       }
     },
     {
@@ -7299,6 +8531,14 @@
           "y": 64490,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 88,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 719
       }
     },
     {
@@ -7346,6 +8586,14 @@
           "y": 29734,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 73,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1433
       }
     },
     {
@@ -7393,6 +8641,14 @@
           "y": 111644,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 56,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1225
       }
     },
     {
@@ -7440,6 +8696,14 @@
           "y": 12685,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 69,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+3 (8)",
+        "survival": 1294
       }
     },
     {
@@ -7487,6 +8751,14 @@
           "y": 22669,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 204
       }
     },
     {
@@ -7534,6 +8806,14 @@
           "y": 9102,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 78,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1191
       }
     },
     {
@@ -7581,6 +8861,14 @@
           "y": 42518,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 1765
       }
     },
     {
@@ -7628,6 +8916,14 @@
           "y": 52164,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 64,
+        "tStage": "T2c",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1266
       }
     },
     {
@@ -7675,6 +8971,14 @@
           "y": 12703,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 69,
+        "tStage": "T2c",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1371
       }
     },
     {
@@ -7722,6 +9026,14 @@
           "y": 49400,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 68,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1384
       }
     },
     {
@@ -7769,6 +9081,14 @@
           "y": 68366,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1100
       }
     },
     {
@@ -7816,6 +9136,14 @@
           "y": 86730,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 63,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 741
       }
     },
     {
@@ -7863,6 +9191,14 @@
           "y": 56055,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 83,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 988
       }
     },
     {
@@ -7910,6 +9246,14 @@
           "y": 141192,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 78,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1050
       }
     },
     {
@@ -7957,6 +9301,14 @@
           "y": 27820,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 78,
+        "tStage": "T2c",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1278
       }
     },
     {
@@ -8004,6 +9356,14 @@
           "y": 7785,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 65,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1037
       }
     },
     {
@@ -8051,6 +9411,14 @@
           "y": 19641,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 57,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1214
       }
     },
     {
@@ -8098,6 +9466,14 @@
           "y": 3575,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 67,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 95
       }
     },
     {
@@ -8145,6 +9521,14 @@
           "y": 6738,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 683
       }
     },
     {
@@ -8192,6 +9576,14 @@
           "y": 29452,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 86,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 416
       }
     },
     {
@@ -8239,6 +9631,14 @@
           "y": 26730,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 83,
+        "tStage": "T3a",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 751
       }
     },
     {
@@ -8286,6 +9686,14 @@
           "y": 96822,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 68,
+        "tStage": "T3",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 1109
       }
     },
     {
@@ -8333,6 +9741,14 @@
           "y": 5838,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 742
       }
     },
     {
@@ -8380,6 +9796,14 @@
           "y": 27431,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 84,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 1080
       }
     },
     {
@@ -8427,6 +9851,14 @@
           "y": 16317,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 65,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 1104
       }
     },
     {
@@ -8474,6 +9906,14 @@
           "y": 8662,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 69,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 1452
       }
     },
     {
@@ -8521,6 +9961,14 @@
           "y": 6688,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 974
       }
     },
     {
@@ -8568,6 +10016,14 @@
           "y": 96720,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 472
       }
     },
     {
@@ -8615,6 +10071,14 @@
           "y": 5229,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 68,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 650
       }
     },
     {
@@ -8662,6 +10126,14 @@
           "y": 179186,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 916
       }
     },
     {
@@ -8709,6 +10181,14 @@
           "y": 59306,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 823
       }
     },
     {
@@ -8756,6 +10236,14 @@
           "y": 62700,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 69,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 518
       }
     },
     {
@@ -8803,6 +10291,14 @@
           "y": 3780,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 82,
+        "tStage": "T3a",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 864
       }
     },
     {
@@ -8850,6 +10346,14 @@
           "y": 31006,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 59,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 679
       }
     },
     {
@@ -8897,6 +10401,14 @@
           "y": 19269,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "5+5 (10)",
+        "survival": 128
       }
     },
     {
@@ -8944,6 +10456,14 @@
           "y": 5724,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 54,
+        "tStage": "Tx",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 981
       }
     },
     {
@@ -8991,6 +10511,14 @@
           "y": 89588,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 72,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 991
       }
     },
     {
@@ -9038,6 +10566,14 @@
           "y": 59892,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 80,
+        "tStage": "T3a",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 957
       }
     },
     {
@@ -9085,6 +10621,14 @@
           "y": 7301,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T2c",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 966
       }
     },
     {
@@ -9132,6 +10676,14 @@
           "y": 89704,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 269
       }
     },
     {
@@ -9179,6 +10731,14 @@
           "y": 135042,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 77,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 965
       }
     },
     {
@@ -9226,6 +10786,14 @@
           "y": 144716,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 73,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 924
       }
     },
     {
@@ -9273,6 +10841,14 @@
           "y": 7363,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 940
       }
     },
     {
@@ -9320,6 +10896,14 @@
           "y": 139166,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 41
       }
     },
     {
@@ -9367,6 +10951,14 @@
           "y": 19764,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 561
       }
     },
     {
@@ -9414,6 +11006,14 @@
           "y": 111792,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T2c",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 866
       }
     },
     {
@@ -9461,6 +11061,14 @@
           "y": 70284,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 859
       }
     },
     {
@@ -9508,6 +11116,14 @@
           "y": 61180,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 65,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 849
       }
     },
     {
@@ -9555,6 +11171,14 @@
           "y": 16677,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 65,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 503
       }
     },
     {
@@ -9602,6 +11226,14 @@
           "y": 67562,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 54,
+        "tStage": "T2c",
+        "nStage": "N1",
+        "mStage": "M0",
+        "gleason": "4+3 (7)",
+        "survival": 822
       }
     },
     {
@@ -9649,6 +11281,14 @@
           "y": 4228,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 785
       }
     },
     {
@@ -9696,6 +11336,14 @@
           "y": 37386,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T2b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 718
       }
     },
     {
@@ -9743,6 +11391,14 @@
           "y": 12501,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 957
       }
     },
     {
@@ -9790,6 +11446,14 @@
           "y": 5022,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 61,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 912
       }
     },
     {
@@ -9837,6 +11501,14 @@
           "y": 11700,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 58,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 934
       }
     },
     {
@@ -9884,6 +11556,14 @@
           "y": 58988,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 69,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 907
       }
     },
     {
@@ -9931,6 +11611,14 @@
           "y": 72505,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 58,
+        "tStage": "T3a",
+        "nStage": "N1",
+        "mStage": "M0",
+        "gleason": "4+5 (9)",
+        "survival": 683
       }
     },
     {
@@ -9978,6 +11666,14 @@
           "y": 60333,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 69,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 893
       }
     },
     {
@@ -10025,6 +11721,14 @@
           "y": 11378,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 78,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M0",
+        "gleason": "4+3 (7)",
+        "survival": 881
       }
     },
     {
@@ -10072,6 +11776,14 @@
           "y": 29820,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 62,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 859
       }
     },
     {
@@ -10119,6 +11831,14 @@
           "y": 21526,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 75,
+        "tStage": "T3",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+5 (10)",
+        "survival": 770
       }
     },
     {
@@ -10166,6 +11886,14 @@
           "y": 81073,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 859
       }
     },
     {
@@ -10213,6 +11941,14 @@
           "y": 30562,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 72,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 848
       }
     },
     {
@@ -10260,6 +11996,14 @@
           "y": 119476,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "3+4 (7)",
+        "survival": 821
       }
     },
     {
@@ -10307,6 +12051,14 @@
           "y": 10091,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 63,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 839
       }
     },
     {
@@ -10354,6 +12106,14 @@
           "y": 68491,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 73,
+        "tStage": "T3",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 598
       }
     },
     {
@@ -10401,6 +12161,14 @@
           "y": 78214,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 691
       }
     },
     {
@@ -10448,6 +12216,14 @@
           "y": 7009,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 75,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 830
       }
     },
     {
@@ -10495,6 +12271,14 @@
           "y": 8904,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 68,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 826
       }
     },
     {
@@ -10542,6 +12326,14 @@
           "y": 32604,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 60,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 825
       }
     },
     {
@@ -10589,6 +12381,14 @@
           "y": 53929,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 78,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M0",
+        "gleason": "4+4 (8)",
+        "survival": 822
       }
     },
     {
@@ -10636,6 +12436,14 @@
           "y": 140505,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 60,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 721
       }
     },
     {
@@ -10683,6 +12491,14 @@
           "y": 9371,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 64,
+        "tStage": "T3",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 800
       }
     },
     {
@@ -10730,6 +12546,14 @@
           "y": 13018,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 770
       }
     },
     {
@@ -10777,6 +12601,14 @@
           "y": 11050,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 67,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 760
       }
     },
     {
@@ -10824,6 +12656,14 @@
           "y": 21375,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 762
       }
     },
     {
@@ -10871,6 +12711,14 @@
           "y": 17226,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 69,
+        "tStage": "T2",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 762
       }
     },
     {
@@ -10918,6 +12766,14 @@
           "y": 34362,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 72,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 755
       }
     },
     {
@@ -10965,6 +12821,14 @@
           "y": 61920,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 68,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 749
       }
     },
     {
@@ -11012,6 +12876,14 @@
           "y": 92391,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 58,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 740
       }
     },
     {
@@ -11059,6 +12931,14 @@
           "y": 104188,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 64,
+        "tStage": "T3",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 722
       }
     },
     {
@@ -11106,6 +12986,14 @@
           "y": 13515,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 67,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 662
       }
     },
     {
@@ -11153,6 +13041,14 @@
           "y": 17637,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 57,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 725
       }
     },
     {
@@ -11200,6 +13096,14 @@
           "y": 21756,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 70,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M0",
+        "gleason": "5+5 (10)",
+        "survival": 703
       }
     },
     {
@@ -11247,6 +13151,14 @@
           "y": 35774,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 74,
+        "tStage": "T4",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 689
       }
     },
     {
@@ -11294,6 +13206,14 @@
           "y": 6191,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 68,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 678
       }
     },
     {
@@ -11341,6 +13261,14 @@
           "y": 13358,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 65,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+5 (9)",
+        "survival": 562
       }
     },
     {
@@ -11388,6 +13316,14 @@
           "y": 63767,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 72,
+        "tStage": "T3b",
+        "nStage": "N0",
+        "mStage": "M1",
+        "gleason": "4+3 (7)",
+        "survival": 416
       }
     },
     {
@@ -11435,6 +13371,14 @@
           "y": 74398,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 73,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M0",
+        "gleason": "5+3 (8)",
+        "survival": 623
       }
     },
     {
@@ -11482,6 +13426,14 @@
           "y": 13872,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 639
       }
     },
     {
@@ -11529,6 +13481,14 @@
           "y": 5128,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 71,
+        "tStage": "T2",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 628
       }
     },
     {
@@ -11576,6 +13536,14 @@
           "y": 91780,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 73,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "5+4 (9)",
+        "survival": 626
       }
     },
     {
@@ -11623,6 +13591,14 @@
           "y": 59508,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 76,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 632
       }
     },
     {
@@ -11670,6 +13646,14 @@
           "y": 4507,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 72,
+        "tStage": "T4",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 620
       }
     },
     {
@@ -11717,6 +13701,14 @@
           "y": 33579,
           "percentile": 1.0
         }
+      },
+      "clinicalInfo": {
+        "age": 66,
+        "tStage": "T3b",
+        "nStage": "N1",
+        "mStage": "M1",
+        "gleason": "4+4 (8)",
+        "survival": 607
       }
     }
   ]
