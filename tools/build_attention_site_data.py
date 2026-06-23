@@ -3,6 +3,8 @@ import json
 import shutil
 from pathlib import Path
 
+from PIL import Image
+
 
 ROOT = Path(__file__).resolve().parents[2]
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -11,22 +13,17 @@ SOURCE_CASE_ROOT = ROOT / "case_csvs_all"
 TARGET_IMAGE_ROOT = REPO_ROOT / "img" / "cases"
 TARGET_DATA_DIR = REPO_ROOT / "data"
 
-
-CASE_GROUPS = {
-    "high_risk": [
-        "16-02265",
-        "16-32397",
-    ],
-    "low_risk": [
-        "20-04611",
-        "20-08950",
-    ],
-}
+RISK_GROUP_IDS = ("high_risk", "low_risk")
 
 
-def copy_file(src: Path, dst: Path) -> None:
-    dst.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(src, dst)
+def export_webp(src: Path, dst_without_suffix: Path, quality: int) -> Path:
+    dst_without_suffix.parent.mkdir(parents=True, exist_ok=True)
+    dst = dst_without_suffix.with_suffix(".webp")
+    with Image.open(src) as img:
+        if img.mode not in ("RGB", "RGBA"):
+            img = img.convert("RGBA")
+        img.save(dst, format="WEBP", quality=quality, method=6)
+    return dst
 
 
 def read_json(path: Path):
@@ -54,6 +51,15 @@ def read_top_scores(path: Path):
     }
 
 
+def discover_case_groups():
+    case_groups = {}
+    for group in RISK_GROUP_IDS:
+        group_dir = SOURCE_PANEL_ROOT / group
+        case_ids = sorted([item.name for item in group_dir.iterdir() if item.is_dir()])
+        case_groups[group] = case_ids
+    return case_groups
+
+
 def build_case(group: str, patient_id: str):
     panel_dir = SOURCE_PANEL_ROOT / group / patient_id
     case_dir = SOURCE_CASE_ROOT / patient_id
@@ -62,22 +68,21 @@ def build_case(group: str, patient_id: str):
     csv_path = case_dir / f"{patient_id}_guided_patch_attention_scores.csv"
 
     image_sources = {
-        "panel": panel_dir / f"{patient_id}_interpretability_panel.png",
-        "wholeSlide": panel_dir / f"{patient_id}_whole_slide_crop.png",
-        "clinicalHeatmap": panel_dir / f"{patient_id}_clinical_guided_heatmap.png",
-        "cellHeatmap": panel_dir / f"{patient_id}_cell_guided_heatmap.png",
-        "clinicalPercentile": case_dir / f"{patient_id}_clinical_guided_percentile.png",
-        "cellPercentile": case_dir / f"{patient_id}_cell_guided_percentile.png",
-        "pathologySelf": case_dir / f"{patient_id}_pathology_self_percentile.png",
+        "panel": (panel_dir / f"{patient_id}_interpretability_panel.png", 76),
+        "wholeSlide": (panel_dir / f"{patient_id}_whole_slide_crop.png", 74),
+        "clinicalHeatmap": (panel_dir / f"{patient_id}_clinical_guided_heatmap.png", 70),
+        "cellHeatmap": (panel_dir / f"{patient_id}_cell_guided_heatmap.png", 70),
+        "clinicalPercentile": (case_dir / f"{patient_id}_clinical_guided_percentile.png", 68),
+        "cellPercentile": (case_dir / f"{patient_id}_cell_guided_percentile.png", 68),
+        "pathologySelf": (case_dir / f"{patient_id}_pathology_self_percentile.png", 68),
     }
 
     target_dir = TARGET_IMAGE_ROOT / patient_id
     image_paths = {}
-    for key, src in image_sources.items():
+    for key, (src, quality) in image_sources.items():
         if src.exists():
-            dst = target_dir / src.name
-            copy_file(src, dst)
-            image_paths[key] = f"img/cases/{patient_id}/{src.name}"
+            dst = export_webp(src, target_dir / src.stem, quality)
+            image_paths[key] = f"img/cases/{patient_id}/{dst.name}"
 
     meta = read_json(meta_path)
     top_scores = read_top_scores(csv_path)
@@ -102,9 +107,12 @@ def build_case(group: str, patient_id: str):
 
 def main():
     TARGET_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    if TARGET_IMAGE_ROOT.exists():
+        shutil.rmtree(TARGET_IMAGE_ROOT)
 
+    case_groups = discover_case_groups()
     cases = []
-    for group, patient_ids in CASE_GROUPS.items():
+    for group, patient_ids in case_groups.items():
         for patient_id in patient_ids:
             cases.append(build_case(group, patient_id))
 
@@ -114,7 +122,7 @@ def main():
         "riskGroups": [
             {"id": "all", "label": "All cases"},
             {"id": "high_risk", "label": "High risk"},
-            {"id": "low_risk", "label": "Low risk"}
+            {"id": "low_risk", "label": "Low risk"},
         ],
         "cases": cases,
     }
