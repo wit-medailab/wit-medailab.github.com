@@ -422,10 +422,10 @@
     const detailDefinitions = [
       { key: "wholeSlide", title: "Whole-slide crop" },
       { key: "clinicalHeatmap", title: "Clinical-guided heatmap" },
-      { key: "cellHeatmap", title: "Cell-guided heatmap" },
+      { key: "cellHeatmap", title: "Morphology-guided heatmap" },
       { key: "pathologySelf", title: "Pathology self percentile" },
       { key: "clinicalPercentile", title: "Clinical-guided percentile" },
-      { key: "cellPercentile", title: "Cell-guided percentile" }
+      { key: "cellPercentile", title: "Morphology-guided percentile" }
     ];
 
     const state = {
@@ -502,7 +502,7 @@
         ["Feature Dim", caseItem.featureDim],
         ["Grid Shape", caseItem.gridShape],
         ["Clinical Tokens", caseItem.clinicalTokenCount],
-        ["Cell Groups", caseItem.cellGroupCount]
+        ["Morphology Groups", caseItem.cellGroupCount]
       ];
 
       metaGridEl.innerHTML = entries.map(([label, value]) => `
@@ -518,7 +518,7 @@
     function renderScores(caseItem) {
       const scoreMap = [
         ["Clinical guided", caseItem.topScores.clinical_guided_percentile],
-        ["Cell guided", caseItem.topScores.cell_guided_percentile],
+        ["Morphology guided", caseItem.topScores.cell_guided_percentile],
         ["Self attention", caseItem.topScores.pathology_self_percentile]
       ];
       topScoresEl.innerHTML = scoreMap.map(([label, value]) => `
@@ -560,7 +560,7 @@
       riskBadgeEl.textContent = riskLabel;
       riskBadgeEl.className = "risk-badge " + current.riskGroup;
       mainTitleEl.textContent = `${current.patientId} cross-modal attention overview`;
-      mainCopyEl.textContent = "The main panel combines the whole-slide crop, clinical-guided attention, cell-guided attention, and representative patches to provide an overall view of the model focus regions.";
+      mainCopyEl.textContent = "The main panel combines the whole-slide crop, clinical-guided attention, morphology-guided attention, and representative patches to provide an overall view of the model focus regions.";
       panelImageEl.src = current.images.panel || "";
       panelImageEl.alt = `${current.patientId} interpretability panel`;
       renderMeta(current);
