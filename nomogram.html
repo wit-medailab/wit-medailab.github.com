@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .el-image__placeholder {
+      background: url('./img/loading.gif') no-repeat 50% 50% !important;
+      background-size: 50% !important;
+    }
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Implications of the Multimodal Nomogram for Predicting PCa Risk Stratification</title>
+  <link rel="icon" type="image/x-icon" href="wit.ico">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.14/lib/theme-chalk/index.css">
+</head>
+
+<body>
+  <div style="max-width: 1400px;margin: 20px auto 0;padding: 0 20px;">
+    <a href="./index.html" style="display: inline-block;margin-bottom: 16px;color: #8b3e5c;text-decoration: none;font-weight: 600;">Back to BiCrossSurv explorer</a>
+  </div>
+
+  <div style="vertical-align: middle;height: 60px;margin: 20px;margin-bottom: 40px;text-align: center;box-shadow: 0 10px 5px -5px #dddddd;">
+      <h1 style="margin: 0px;line-height: 60px;">
+        Clinical Implications of the Multimodal Nomogram for Predicting PCa Risk Stratification
+      </h1>
+  </div>
+
+  <div id="main">
+    <div style="border: 20px;">
+      <template>
+        <span style="margin-left: 30px;">Please select a patient:
+          <el-select ref="item_selected" v-model="value" filterable placeholder="Please select" style="width: 150px;">
+            <el-option
+              v-for="item in options"
+              :key="item.value"
+              :value="item.value"
+              :label="item.label">
+            </el-option>
+          </el-select>
+        </span>
+      </template>
+    </div>
+
+    <div style="text-align: center;display: block;margin: 20px;">
+      <el-image id="image" ref="img" style="width: auto;max-width: 1400px;border: 10px;border-style: solid;border-color: transparent;" src="./img/firstpage.png">
+        <div slot="placeholder" class="image-slot">
+          <i class="el-icon-picture-outline"></i>
+        </div>
+      </el-image>
+    </div>
+
+    <div style="text-align:center;margin: 20px;">
+      <el-row>
+        <span style="text-align: center;">Risk prediction of the multimodal nomogram: </span>
+        <el-tag effect="dark" id="nomo" ref="nomo" :type="nomo_tag" v-model="nomo_tag" style="margin-right: 200px;width: 124px;text-align: center;">unknown</el-tag>
+        <span style="text-align: center;">Risk Assignment according to EAU guideline: </span>
+        <el-tag effect="dark" id="eau" ref="eau" :type="eau_tag" v-model="eau_tag" style="width: 124px;text-align: center;">unknown</el-tag>
+      </el-row>
+    </div>
+    <div style="position: relative;right: 0;bottom: 0;margin-top: 30px;">
+      <p style="text-align: right;font-size: 10px;margin: 5px;">For any inquiry, please contact us at xwu@wit.edu.cn</p>
+      <p style="text-align: right;font-size: 10px;margin: 5px;">Copyright @ MedAILab in Wuhan Institute of Technology</p>
+      <p style="text-align: right;font-size: 10px;margin: 5px;">All Right Reserved</p>
+    </div>
+  </div>
+
+</body>
+
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+  <script>
+    const app = new Vue({
+      el: '#main',
+      mounted() {
+        window.addEventListener('load', this.preloadImages);
+      },
+
+      data() {
+        return {
+          nomo_tag: "info",
+          eau_tag: "info",
+          image_path: "./img/firstpage.png",
+          options: [{
+            value: 'A',
+            label: 'Patient A'
+          }, {
+            value: 'B',
+            label: 'Patient B'
+          }, {
+            value: 'C',
+            label: 'Patient C'
+          }, {
+            value: 'D',
+            label: 'Patient D'
+          }, {
+            value: 'E',
+            label: 'Patient E'
+          }, {
+            value: 'F',
+            label: 'Patient F'
+          }, {
+            value: 'G',
+            label: 'Patient G'
+          }, {
+            value: 'H',
+            label: 'Patient H'
+          }, {
+            value: 'I',
+            label: 'Patient I'
+          }, {
+            value: 'J',
+            label: 'Patient J'
+          }, {
+            value: 'L',
+            label: 'Patient L'
+          }, {
+            value: 'M',
+            label: 'Patient M'
+          }, {
+            value: 'N',
+            label: 'Patient N'
+          }, {
+            value: 'O',
+            label: 'Patient O'
+          }, {
+            value: 'P',
+            label: 'Patient P'
+          }, {
+            value: 'Q',
+            label: 'Patient Q'
+          }, {
+            value: 'R',
+            label: 'Patient R'
+          }, {
+            value: 'S',
+            label: 'Patient S'
+          }, {
+            value: 'T',
+            label: 'Patient T'
+          }, {
+            value: 'U',
+            label: 'Patient U'
+          }, {
+            value: 'V',
+            label: 'Patient V'
+          }, {
+            value: 'W',
+            label: 'Patient W'
+          }, {
+            value: 'X',
+            label: 'Patient X'
+          }, {
+            value: 'Y',
+            label: 'Patient Y'
+          }, {
+            value: 'Z',
+            label: 'Patient Z'
+          }],
+          value: ''
+        }
+      },
+
+      methods: {
+        nomotagLow() {
+          this.nomo_tag = 'success';
+        },
+
+        eautagLow() {
+          this.eau_tag = 'success';
+        },
+
+        nomotagIntermediate() {
+          this.nomo_tag = 'warning';
+        },
+
+        eautagIntermediate() {
+          this.eau_tag = 'warning';
+        },
+
+        nomotagHigh() {
+          this.nomo_tag = 'danger';
+        },
+
+        eautagHigh() {
+          this.eau_tag = 'danger';
+        },
+
+        change() {
+          console.log(this.value);
+        },
+
+        preloadImages() {
+          let imgs = [
+          "./img/0_0_0.png",
+          "./img/0_0_1.png",
+          "./img/0_0_2.png",
+          "./img/0_0_3.png",
+          "./img/0_0_4.png",
+          "./img/0_0_5.png",
+          "./img/0_0_6.png",
+          "./img/0_1.png",
+          "./img/1_0.png",
+          "./img/1_1_0.png",
+          "./img/1_1_1.png",
+          "./img/1_1_2.png",
+          "./img/1_1_3.png",
+          "./img/1_1_4.png",
+          "./img/1_1_5.png",
+          "./img/2_1_0.png",
+          "./img/2_2_0.png",
+          "./img/2_2_1.png",
+          "./img/2_2_2.png",
+          "./img/2_2_3.png",
+          "./img/2_2_4.png",
+          "./img/2_2_5.png",
+          "./img/2_2_6.png",
+          "./img/2_2_7.png",
+          "./img/2_2_8.png",
+          "./img/2_2_9.png"
+          ]
+
+          for (let img of imgs) {
+            let image = new Image()
+            image.src = img
+            image.onload = () => {
+              this.count++
+            }
+          }
+        }
+      },
+      watch: {
+        value(val) {
+          this.change();
+          var img = document.getElementById("image");
+          var nomo = document.getElementById("nomo");
+          var eau = document.getElementById("eau");
+          switch (val) {
+            case 'A':
+              img.src = "./img/0_0_0.png";
+              eau.innerText = "Low";
+              nomo.innerText = "Low";
+              this.eautagLow();
+              this.nomotagLow();
+              break;
+            case 'B':
+              img.src = "./img/0_0_1.png";
+              eau.innerText = "Low";
+              nomo.innerText = "Low";
+              this.eautagLow();
+              this.nomotagLow();
+              break;
+            case 'C':
+              img.src = "./img/0_0_2.png";
+              eau.innerText = "Low";
+              nomo.innerText = "Low";
+              this.eautagLow();
+              this.nomotagLow();
+              break;
+            case 'D':
+              img.src = "./img/0_0_3.png";
+              eau.innerText = "Low";
+              nomo.innerText = "Low";
+              this.eautagLow();
+              this.nomotagLow();
+              break;
+            case 'E':
+              img.src = "./img/0_0_4.png";
+              eau.innerText = "Low";
+              nomo.innerText = "Low";
+              this.eautagLow();
+              this.nomotagLow();
+              break;
+            case 'F':
+              img.src = "./img/0_0_5.png";
+              eau.innerText = "Low";
+              nomo.innerText = "Low";
+              this.eautagLow();
+              this.nomotagLow();
+              break;
+            case 'G':
+              img.src = "./img/0_0_6.png";
+              eau.innerText = "Low";
+              nomo.innerText = "Low";
+              this.eautagLow();
+              this.nomotagLow();
+              break;
+            case 'H':
+              img.src = "./img/0_1.png";
+              eau.innerText = "Low";
+              nomo.innerText = "Intermediate";
+              this.eautagLow();
+              this.nomotagIntermediate();
+              break;
+            case 'I':
+              img.src = "./img/1_0.png";
+              eau.innerText = "Intermediate";
+              nomo.innerText = "Low";
+              this.eautagIntermediate();
+              this.nomotagLow();
+              break;
+            case 'J':
+              img.src = "./img/1_1_0.png";
+              eau.innerText = "Intermediate";
+              nomo.innerText = "Intermediate";
+              this.eautagIntermediate();
+              this.nomotagIntermediate();
+              break;
+            case 'K':
+              img.src = "./img/1_1_1.png";
+              eau.innerText = "Intermediate";
+              nomo.innerText = "Intermediate";
+              this.eautagIntermediate();
+              this.nomotagIntermediate();
+              break;
+            case 'L':
+              img.src = "./img/1_1_2.png";
+              eau.innerText = "Intermediate";
+              nomo.innerText = "Intermediate";
+              this.eautagIntermediate();
+              this.nomotagIntermediate();
+              break;
+            case 'M':
+              img.src = "./img/1_1_3.png";
+              eau.innerText = "Intermediate";
+              nomo.innerText = "Intermediate";
+              this.eautagIntermediate();
+              this.nomotagIntermediate();
+              break;
+            case 'N':
+              img.src = "./img/1_1_4.png";
+              eau.innerText = "Intermediate";
+              nomo.innerText = "Intermediate";
+              this.eautagIntermediate();
+              this.nomotagIntermediate();
+              break;
+            case 'O':
+              img.src = "./img/1_1_5.png";
+              eau.innerText = "Intermediate";
+              nomo.innerText = "Intermediate";
+              this.eautagIntermediate();
+              this.nomotagIntermediate();
+              break;
+            case 'P':
+              img.src = "./img/2_1_0.png";
+              eau.innerText = "High";
+              nomo.innerText = "Intermediate";
+              this.eautagHigh();
+              this.nomotagIntermediate();
+              break;
+            case 'Q':
+              img.src = "./img/2_2_0.png";
+              eau.innerText = "High";
+              nomo.innerText = "High";
+              this.eautagHigh();
+              this.nomotagHigh();
+              break;
+            case 'R':
+              img.src = "./img/2_2_1.png";
+              eau.innerText = "High";
+              nomo.innerText = "High";
+              this.eautagHigh();
+              this.nomotagHigh();
+              break;
+            case 'S':
+              img.src = "./img/2_2_2.png";
+              eau.innerText = "High";
+              nomo.innerText = "High";
+              this.eautagHigh();
+              this.nomotagHigh();
+              break;
+            case 'T':
+              img.src = "./img/2_2_3.png";
+              eau.innerText = "High";
+              nomo.innerText = "High";
+              this.eautagHigh();
+              this.nomotagHigh();
+              break;
+            case 'U':
+              img.src = "./img/2_2_4.png";
+              eau.innerText = "High";
+              nomo.innerText = "High";
+              this.eautagHigh();
+              this.nomotagHigh();
+              break;
+            case 'V':
+              img.src = "./img/2_2_5.png";
+              eau.innerText = "High";
+              nomo.innerText = "High";
+              this.eautagHigh();
+              this.nomotagHigh();
+              break;
+            case 'W':
+              img.src = "./img/2_2_6.png";
+              eau.innerText = "High";
+              nomo.innerText = "High";
+              this.eautagHigh();
+              this.nomotagHigh();
+              break;
+            case 'X':
+              img.src = "./img/2_2_7.png";
+              eau.innerText = "High";
+              nomo.innerText = "High";
+              this.eautagHigh();
+              this.nomotagHigh();
+              break;
+            case 'Y':
+              img.src = "./img/2_2_8.png";
+              eau.innerText = "High";
+              nomo.innerText = "High";
+              this.eautagHigh();
+              this.nomotagHigh();
+              break;
+            case 'Z':
+              img.src = "./img/2_2_9.png";
+              eau.innerText = "High";
+              nomo.innerText = "High";
+              this.eautagHigh();
+              this.nomotagHigh();
+              break;
+          }
+        }
+      }
+    });
+  </script>
+</html>
