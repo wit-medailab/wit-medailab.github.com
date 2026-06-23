@@ -118,7 +118,7 @@ def main():
 
     payload = {
         "paperTitle": "BiCrossSurv attention visualization for prostate cancer prognosis",
-        "paperDescription": "This page presents BiCrossSurv cross-modal attention results with risk-group filtering, case switching, interpretability panels, heatmaps, percentile maps, and auto-extracted metadata.",
+        "paperDescription": "MedAILab project site featuring BiCrossSurv cross-modal attention results for prostate cancer prognosis, with access to related multimodal pathology demos and archived project pages.",
         "riskGroups": [
             {"id": "all", "label": "All cases"},
             {"id": "high_risk", "label": "High risk"},
