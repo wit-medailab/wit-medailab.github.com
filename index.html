@@ -558,6 +558,7 @@
     }
 
     function renderMeta(caseItem) {
+      const visibleCellGroups = (caseItem.cellGroups || []).filter((group) => group !== "other");
       const entries = [
         ["Patient ID", caseItem.patientId],
         ["Fold", caseItem.fold],
@@ -566,7 +567,7 @@
         ["Feature Dim", caseItem.featureDim],
         ["Grid Shape", caseItem.gridShape],
         ["Clinical Tokens", caseItem.clinicalTokenCount],
-        ["Morphology Groups", caseItem.cellGroupCount]
+        ["Morphology Groups", visibleCellGroups.length]
       ];
 
       metaGridEl.innerHTML = entries.map(([label, value]) => `
@@ -576,7 +577,7 @@
         </div>
       `).join("");
 
-      cellGroupsEl.innerHTML = caseItem.cellGroups.map((group) => `<span>${group}</span>`).join("");
+      cellGroupsEl.innerHTML = visibleCellGroups.map((group) => `<span>${group}</span>`).join("");
     }
 
     function renderScores(caseItem) {

@@ -152,6 +152,7 @@ def build_case(group: str, patient_id: str, clinical_lookup):
     meta = read_json(meta_path)
     top_scores = read_top_scores(csv_path)
     clinical_info = clinical_lookup.get(patient_id, {})
+    cell_groups = [group_name for group_name in meta["cell_group_names"] if group_name != "other"]
 
     return {
         "id": patient_id,
@@ -172,8 +173,8 @@ def build_case(group: str, patient_id: str, clinical_lookup):
         "featureDim": meta["feature_dim"],
         "gridShape": f"{meta['grid_shape'][0]} x {meta['grid_shape'][1]}",
         "clinicalTokenCount": len(meta["clinical_cols"]),
-        "cellGroupCount": len(meta["cell_group_names"]),
-        "cellGroups": meta["cell_group_names"],
+        "cellGroupCount": len(cell_groups),
+        "cellGroups": cell_groups,
         "images": image_paths,
         "topScores": top_scores,
     }
