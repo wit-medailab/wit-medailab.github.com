@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BiCrossSurv 注意力可视化展示</title>
+  <title>BiCrossSurv Attention Visualization</title>
   <link rel="icon" type="image/x-icon" href="wit.ico">
   <style>
     :root {
@@ -316,18 +316,18 @@
   <main class="page">
     <section class="hero">
       <div class="eyebrow">BiCrossSurv Attention Explorer</div>
-      <h1 id="paper-title">加载中...</h1>
+      <h1 id="paper-title">Loading...</h1>
       <p id="paper-desc" class="lead"></p>
     </section>
 
     <section class="controls">
       <div class="control-grid">
         <div class="field">
-          <label>风险组筛选</label>
+          <label>Risk group filter</label>
           <div id="risk-chips" class="chips"></div>
         </div>
         <div class="field">
-          <label for="case-select">病例选择</label>
+          <label for="case-select">Case selection</label>
           <select id="case-select"></select>
         </div>
       </div>
@@ -344,22 +344,22 @@
       </article>
 
       <aside class="meta-panel">
-        <h2 class="section-title">病例信息</h2>
+        <h2 class="section-title">Case information</h2>
         <div class="meta-grid" id="meta-grid"></div>
         <div class="group-list" style="margin-bottom: 14px;">
-          <h3>细胞形态分组</h3>
+          <h3>Cell morphology groups</h3>
           <div id="cell-groups" class="stack"></div>
         </div>
         <div class="score-list">
-          <h3>最高注意力位置</h3>
+          <h3>Top attention locations</h3>
           <div id="top-scores"></div>
         </div>
       </aside>
     </section>
 
     <section class="detail-panel">
-      <h2 class="section-title">细节视图</h2>
-      <p class="section-copy">主图用于答辩快速展示，下面这些分图更适合解释模型在不同引导方式下关注了哪些区域。</p>
+      <h2 class="section-title">Detailed views</h2>
+      <p class="section-copy">The main panel combines the overview attention result, while the detailed views below show how the model responds under different guidance strategies.</p>
       <div id="detail-grid" class="detail-grid"></div>
     </section>
 
@@ -486,19 +486,19 @@
 
       detailGridEl.innerHTML = cards.length
         ? cards.join("")
-        : '<div class="empty">当前病例还没有可展示的细节分图。</div>';
+        : '<div class="empty">No detailed views are available for the current case.</div>';
     }
 
     function renderCurrentCase() {
       const current = state.data.cases.find((item) => item.id === state.selectedCaseId);
       if (!current) {
-        mainTitleEl.textContent = "暂无病例";
-        mainCopyEl.textContent = "当前筛选条件下没有可展示的数据。";
+        mainTitleEl.textContent = "No case available";
+        mainCopyEl.textContent = "No data is available under the current filter.";
         panelImageEl.removeAttribute("src");
         metaGridEl.innerHTML = "";
         cellGroupsEl.innerHTML = "";
         topScoresEl.innerHTML = "";
-        detailGridEl.innerHTML = '<div class="empty">暂无可展示内容。</div>';
+        detailGridEl.innerHTML = '<div class="empty">No content available.</div>';
         riskBadgeEl.textContent = "";
         riskBadgeEl.className = "risk-badge";
         return;
@@ -507,8 +507,8 @@
       const riskLabel = current.riskGroup === "high_risk" ? "High risk" : "Low risk";
       riskBadgeEl.textContent = riskLabel;
       riskBadgeEl.className = "risk-badge " + current.riskGroup;
-      mainTitleEl.textContent = `${current.patientId} 病例的跨模态注意力总览`;
-      mainCopyEl.textContent = "主图整合了 whole-slide crop、clinical-guided attention、cell-guided attention 和关键 patch 展示，适合在答辩或汇报时先整体介绍模型关注区域。";
+      mainTitleEl.textContent = `${current.patientId} cross-modal attention overview`;
+      mainCopyEl.textContent = "The main panel combines the whole-slide crop, clinical-guided attention, cell-guided attention, and representative patches to provide an overall view of the model focus regions.";
       panelImageEl.src = current.images.panel || "";
       panelImageEl.alt = `${current.patientId} interpretability panel`;
       renderMeta(current);
@@ -537,8 +537,8 @@
         renderAll();
       })
       .catch(() => {
-        titleEl.textContent = "数据加载失败";
-        descEl.textContent = "请先生成 data/cases.json，或者检查图片与数据文件是否已经放入仓库。";
+        titleEl.textContent = "Failed to load data";
+        descEl.textContent = "Please generate data/cases.json first, or confirm that the data and image files are available in the repository.";
       });
   </script>
 </body>
