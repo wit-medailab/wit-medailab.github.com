@@ -138,6 +138,22 @@
       margin-bottom: 18px;
     }
 
+    .clinical-panel {
+      padding: 18px;
+      margin-bottom: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+
+    .clinical-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+    }
+
     .main-panel,
     .meta-panel,
     .detail-panel {
@@ -328,6 +344,10 @@
         grid-template-columns: 1fr;
       }
 
+      .clinical-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
       .detail-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -339,7 +359,8 @@
       }
 
       .detail-grid,
-      .meta-grid {
+      .meta-grid,
+      .clinical-grid {
         grid-template-columns: 1fr;
       }
 
@@ -373,6 +394,12 @@
           <select id="case-select"></select>
         </div>
       </div>
+    </section>
+
+    <section class="clinical-panel">
+      <h2 class="section-title">Clinical information</h2>
+      <p class="section-copy">Selected patient clinical descriptors used alongside pathology attention analysis.</p>
+      <div id="clinical-grid" class="clinical-grid"></div>
     </section>
 
     <section class="layout">
@@ -446,10 +473,43 @@
     const mainTitleEl = document.getElementById("main-title");
     const mainCopyEl = document.getElementById("main-copy");
     const panelImageEl = document.getElementById("panel-image");
+    const clinicalGridEl = document.getElementById("clinical-grid");
     const metaGridEl = document.getElementById("meta-grid");
     const cellGroupsEl = document.getElementById("cell-groups");
     const topScoresEl = document.getElementById("top-scores");
     const detailGridEl = document.getElementById("detail-grid");
+
+    function formatClinicalValue(value) {
+      if (value === null || value === undefined || value === "") return "N/A";
+      return value;
+    }
+
+    function formatClinicalDisplay(label, value) {
+      const formatted = formatClinicalValue(value);
+      if (formatted === "N/A") return formatted;
+      if (label === "Age") return `${formatted} years`;
+      if (label === "Survival") return `${formatted} days`;
+      return formatted;
+    }
+
+    function renderClinical(caseItem) {
+      const clinicalInfo = caseItem.clinicalInfo || {};
+      const entries = [
+        ["Age", clinicalInfo.age],
+        ["T stage", clinicalInfo.tStage],
+        ["N stage", clinicalInfo.nStage],
+        ["M stage", clinicalInfo.mStage],
+        ["Gleason", clinicalInfo.gleason],
+        ["Survival", clinicalInfo.survival]
+      ];
+
+      clinicalGridEl.innerHTML = entries.map(([label, value]) => `
+        <div class="meta-card">
+          <div class="meta-label">${label}</div>
+          <div class="meta-value">${formatClinicalDisplay(label, value)}</div>
+        </div>
+      `).join("");
+    }
 
     function getFilteredCases() {
       if (!state.data) return [];
@@ -551,6 +611,7 @@
         mainTitleEl.textContent = "No case available";
         mainCopyEl.textContent = "No data is available under the current filter.";
         panelImageEl.removeAttribute("src");
+        clinicalGridEl.innerHTML = "";
         metaGridEl.innerHTML = "";
         cellGroupsEl.innerHTML = "";
         topScoresEl.innerHTML = "";
@@ -567,6 +628,7 @@
       mainCopyEl.textContent = "The main panel combines the whole-slide crop, clinical-guided attention, morphology-guided attention, and representative patches to provide an overall view of the model focus regions.";
       panelImageEl.src = current.images.panel || "";
       panelImageEl.alt = `${current.patientId} interpretability panel`;
+      renderClinical(current);
       renderMeta(current);
       renderScores(current);
       renderDetails(current);
